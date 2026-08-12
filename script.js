@@ -172,7 +172,7 @@ function generateResult(name, gender) {
 
 function startPrankCountdown() {
 
-    let remaining = 14;
+    let remaining = 9;
 
     const countdown =
         document.getElementById("countdown");
