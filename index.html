@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LoveLine — Discover Your Love Line</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+
+        <div class="hero">
+
+            <div class="badge">💘 LOVE • DESTINY • CHAOS</div>
+
+            <h1>
+                Discover Your
+                <span>Love Line</span>
+            </h1>
+
+            <p class="subtitle">
+                Ever wondered what your love life has secretly planned for you?
+                Enter your details and let our extremely questionable
+                scientific algorithm reveal your romantic destiny. 👀
+            </p>
+
+            <div class="features">
+                <div>🔮 Love Prediction</div>
+                <div>❤️ Compatibility</div>
+                <div>✨ Destiny Analysis</div>
+            </div>
+
+            <button class="primary-btn" onclick="showPage('explore')">
+                Let's Explore →
+            </button>
+
+            <p class="tiny">
+                *Results are 100% scientifically suspicious.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- FORM -->
+    <section id="explore" class="page">
+
+        <div class="card">
+
+            <div class="back" onclick="showPage('home')">
+                ← Back
+            </div>
+
+            <div class="icon">💘</div>
+
+            <h2>Let's Find Your Love Line</h2>
+
+            <p>
+                Don't worry. Your destiny is safe with us.
+                Probably.
+            </p>
+
+            <form id="loveForm">
+
+                <label>Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name..."
+                    maxlength="30"
+                    required
+                >
+
+                <label>Gender</label>
+
+                <div class="gender-container">
+
+                    <button
+                        type="button"
+                        class="gender"
+                        data-gender="male"
+                        onclick="selectGender(this)"
+                    >
+                        👦 Male
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gender"
+                        data-gender="female"
+                        onclick="selectGender(this)"
+                    >
+                        👧 Female
+                    </button>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="gender"
+                    required
+                >
+
+
+                <!-- CAPTCHA -->
+                <div class="captcha-box">
+
+                    <div class="captcha-title">
+                        🔐 Human Verification
+                    </div>
+
+                    <p>
+                        Listen to the 10-second audio and find the
+                        verification code.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="audio-btn"
+                        onclick="playCaptcha()"
+                    >
+                        🔊 Play CAPTCHA Audio
+                    </button>
+
+                    <div class="captcha-input">
+
+                        <input
+                            type="text"
+                            id="captcha"
+                            placeholder="Enter 4-digit code"
+                            maxlength="4"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                    <audio id="captchaAudio" src="captcha.mp3"></audio>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn calculate-btn"
+                >
+                    Calculate My Love Line 💘
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+    <section id="result" class="page">
+
+        <div class="result-card">
+
+            <div class="result-icon">🔮</div>
+
+            <h2 id="resultTitle"></h2>
+
+            <p id="resultText"></p>
+
+            <div class="love-meter">
+
+                <div class="meter-label">
+                    <span>Love Potential</span>
+                    <span id="percentage">0%</span>
+                </div>
+
+                <div class="meter">
+                    <div id="meterFill"></div>
+                </div>
+
+            </div>
+
+            <p class="analysis">
+                ❤️ The cosmic algorithm has spoken.
+            </p>
+
+            <div class="waiting">
+
+                <span class="loader"></span>
+
+                <span id="countdown">
+                    Finalising your destiny...
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRANK -->
+    <div id="prankScreen">
+
+        <div class="disco disco1"></div>
+        <div class="disco disco2"></div>
+
+        <div class="prank-content">
+
+            <div class="warning">
+                ⚠️ IMPORTANT ANNOUNCEMENT ⚠️
+            </div>
+
+            <h1>
+                BETA PÜDHLE! 😭
+            </h1>
+
+            <p>
+                Baap-Dada paisa padhne ke liye fook rahe hain...
+            </p>
+
+            <p class="big">
+                LAUNDIYABAazi KARNE KE LIYE NAHI 💀
+            </p>
+
+            <div class="study">
+                📚 AB JAAKE PADH LE
+            </div>
+
+            <button onclick="exitPrank()">
+                Okay Baba 😭
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <audio id="prankAudio" src="prank.mp3"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
