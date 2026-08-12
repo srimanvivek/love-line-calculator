@@ -263,7 +263,7 @@ function generateResult(name, gender) {
 
 function startPrankCountdown() {
 
-    let remaining = 10;
+    let remaining = 13;
 
 
     const countdown =
